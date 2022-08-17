@@ -67,4 +67,50 @@ print(perricornios) #la lista está vacía, vemos dos []
 
 #eliminar la lista
 del perricornios # del, viene de "delete"
-print(perricornios) #tira error, lista no definida.. fue borrada 
+#print(perricornios) #tira error, lista no definida.. fue borrada 
+
+#TUPLAS
+#lo escribimos entre ()
+#definimos una tupla
+cocina = ("cuchara", "cuchillo", "tenedor")
+print(cocina)
+
+#para ver el largo de la tupla
+print(len(cocina))
+
+#para acceder a un elemento usamos [], no ()
+print(cocina[0]) #vemos el indice 0 de la tupla
+
+#mostrar de manera inversa
+print(cocina[-1]) #muestra el último elemento de la tupla, "tenedor"
+print(cocina[-2]) #muestra el anteúltimo, en este caso "cuchillo"
+
+#Accedemos a un rango
+print(cocina[0:1]) #muestra ('cuchara',) --> asi se ven las tuplas, lo reconozco por la coma
+print(cocina[0:2]) #muestra ('cuchara', 'cuchillo',)
+#ejemplo
+verduras = ('papa') #esto NO es tupla. es tipo string 
+print(verduras)
+verduras = ('papa',) #"ahora SI es una tupla"
+print(verduras)
+
+#recorremos los elementos de la tupla
+for utensillos in cocina: #print usa \n para los saltos de linea
+    print(utensillos, end=' ') #finalizamos los saltos de linea y los mostramos al lado con un ' '
+
+#cocina[0]= "plato"
+#print(cocina) --> da ERROR, las tuplas no se pueden reasignar
+
+#modificar las tuplas
+#no son buena practica, solo sar cuando sea necesario
+#hacemos conversion de tupla a lista
+#y luego convertimos de lista a tupla
+
+cocinaLista = list(cocina)
+cocinaLista[0]= "plato" #hacemos la modificación
+cocina = tuple(cocinaLista) #volvemos a convertir a tupla
+print('\n',cocina) #ahora lo vemos y con el '\n' hacemos elsalto de línea
+
+del cocina #eliminamos la tupla
+#print(cocina) #cocina ya no está definido
+
