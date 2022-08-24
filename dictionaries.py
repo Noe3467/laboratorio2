@@ -73,4 +73,48 @@ print(diccionario) #vemos solo las {}
 
 #Eliminar diccionario
 del diccionario #el diccionario se borró
-#print(diccionario) #vemos el'NOT DEFINED
+#print(diccionario) #vemos el'NOT DEFINED'
+
+#Concatenamos Listas
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6, 7]
+lista3 = lista1 + lista2 #Se fusionan en una sola
+print(lista3)
+
+lista3.extend([7, 8, 9]) #agregamos varios elementos a una lista
+print(lista3) #acepta valores repetidos, el 7
+print(lista3.index(5)) # el elemento 5, está en la posición 4
+print(lista3.index(7)) # el elemento 7 está en la posición 6
+#print(lista3.index(0)) # devuelve error, porque el elemento 0 no está en la lista3
+
+#Cuántos valores repetidos hay en una lista?
+print(lista3.count(7)) # muestra cuantas veces se repite el valor 7,en este caso es 2
+
+#Para poner al revés una lista
+print(lista3.reverse())
+print(lista3) # la muestra al revés
+
+#Para que una lista de multiplique repitiendo sus elementos
+lista = [1, 2, 3] * 2
+print(lista)
+
+lista3 = lista3 * 2
+print(lista3)
+
+#Métodos de ordenamiento
+#La función SORT los ordena en ascendente por default
+lista3.sort()
+lista.sort()
+print(lista)
+print(lista3)
+
+#Para ordenarlos de forma DESCENDENTE
+lista3.sort(reverse = True)
+print(lista3) #vemos ordenado de atrás hacia adelante
+
+#Repaso de tuplas
+tupla = (7, 'siete', [8, 9, 10], 'lista de números', 10.97, True) #puede tener diferentes tipos de datos.
+print(tupla)
+
+print(7 in tupla) #buscamos un elemento en la tupla, devuelve True si lo tiene
+print(7 not in tupla) #devuelve False, porqe si lo tiene
